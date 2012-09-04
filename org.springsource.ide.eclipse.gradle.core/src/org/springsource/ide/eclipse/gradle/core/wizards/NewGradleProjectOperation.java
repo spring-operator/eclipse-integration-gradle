@@ -16,15 +16,15 @@ import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubProgressMonitor;
+import org.springsource.ide.eclipse.commons.livexp.core.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
+import org.springsource.ide.eclipse.commons.livexp.core.Validator;
 import org.springsource.ide.eclipse.gradle.core.samples.SampleProject;
 import org.springsource.ide.eclipse.gradle.core.util.ErrorHandler;
 import org.springsource.ide.eclipse.gradle.core.util.ExceptionUtil;
-import org.springsource.ide.eclipse.gradle.core.util.expression.LiveExpression;
 import org.springsource.ide.eclipse.gradle.core.validators.NewProjectLocationValidator;
 import org.springsource.ide.eclipse.gradle.core.validators.ProjectNameValidator;
 import org.springsource.ide.eclipse.gradle.core.validators.SampleProjectValidator;
-import org.springsource.ide.eclipse.gradle.core.validators.ValidationResult;
-import org.springsource.ide.eclipse.gradle.core.validators.Validator;
 import org.springsource.ide.eclipse.gradle.core.wizards.PrecomputedProjectMapper.NameClashException;
 
 

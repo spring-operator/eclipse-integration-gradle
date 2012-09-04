@@ -22,7 +22,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.codehaus.groovy;resolution:=optional,
  org.apache.commons.io,
  org.eclipse.m2e.core;resolution:=optional,
- org.eclipse.m2e.maven.runtime;resolution:=optional
+ org.eclipse.m2e.maven.runtime;resolution:=optional,
+ org.springsource.ide.eclipse.commons.livexp;bundle-version="3.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .,
@@ -47,7 +48,6 @@ Export-Package: org.gradle.tooling.model,
  org.springsource.ide.eclipse.gradle.core.preferences,
  org.springsource.ide.eclipse.gradle.core.samples,
  org.springsource.ide.eclipse.gradle.core.util,
- org.springsource.ide.eclipse.gradle.core.util.expression,
  org.springsource.ide.eclipse.gradle.core.validators,
  org.springsource.ide.eclipse.gradle.core.wizards,
  org.springsource.ide.eclipse.gradle.core.wtp

@@ -11,9 +11,9 @@
 package org.springsource.ide.eclipse.gradle.core.validators;
 
 import org.eclipse.jdt.launching.IVMInstall;
+import org.springsource.ide.eclipse.commons.livexp.core.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
 import org.springsource.ide.eclipse.gradle.core.util.JavaRuntimeUtils;
-import org.springsource.ide.eclipse.gradle.core.util.expression.LiveExpression;
-
 
 /**
  * @author Kris De Volder

@@ -10,9 +10,11 @@
  *******************************************************************************/
 package org.springsource.ide.eclipse.gradle.core.validators;
 
+import org.springsource.ide.eclipse.commons.livexp.core.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
+import org.springsource.ide.eclipse.commons.livexp.core.Validator;
+import org.springsource.ide.eclipse.commons.livexp.core.ValueListener;
 import org.springsource.ide.eclipse.gradle.core.samples.SampleProject;
-import org.springsource.ide.eclipse.gradle.core.util.expression.LiveExpression;
-import org.springsource.ide.eclipse.gradle.core.util.expression.ValueListener;
 
 /**
  * @author Kris De Volder

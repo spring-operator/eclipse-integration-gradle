@@ -15,11 +15,12 @@ import java.io.File;
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.springsource.ide.eclipse.gradle.core.util.expression.LiveExpression;
-import org.springsource.ide.eclipse.gradle.core.util.expression.ValueListener;
+import org.springsource.ide.eclipse.commons.livexp.core.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
+import org.springsource.ide.eclipse.commons.livexp.core.Validator;
+import org.springsource.ide.eclipse.commons.livexp.core.ValueListener;
 
-
-import static org.springsource.ide.eclipse.gradle.core.validators.ValidationResult.error;
+import static org.springsource.ide.eclipse.commons.livexp.core.ValidationResult.error;
 
 /**
  * Validation logic for functionality that expects to a new directory. 

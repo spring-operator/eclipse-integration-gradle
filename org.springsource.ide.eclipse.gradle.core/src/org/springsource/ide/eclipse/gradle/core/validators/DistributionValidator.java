@@ -10,15 +10,14 @@
  *******************************************************************************/
 package org.springsource.ide.eclipse.gradle.core.validators;
 
-import static org.springsource.ide.eclipse.gradle.core.validators.ValidationResult.OK;
-import static org.springsource.ide.eclipse.gradle.core.validators.ValidationResult.error;
-
 import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.springsource.ide.eclipse.gradle.core.util.expression.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
 
+import static org.springsource.ide.eclipse.commons.livexp.core.ValidationResult.*;
 
 /**
  * Validator logic for the {@link DistributionSection}

@@ -10,13 +10,15 @@
  *******************************************************************************/
 package org.springsource.ide.eclipse.gradle.core.validators;
 
-import static org.springsource.ide.eclipse.gradle.core.validators.ValidationResult.error;
-
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Assert;
-import org.springsource.ide.eclipse.gradle.core.util.expression.LiveExpression;
-import org.springsource.ide.eclipse.gradle.core.util.expression.ValueListener;
+import org.springsource.ide.eclipse.commons.livexp.core.LiveExpression;
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
+import org.springsource.ide.eclipse.commons.livexp.core.Validator;
+import org.springsource.ide.eclipse.commons.livexp.core.ValueListener;
+
+import static org.springsource.ide.eclipse.commons.livexp.core.ValidationResult.error;
 
 
 /**

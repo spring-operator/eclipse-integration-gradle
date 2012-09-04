@@ -18,8 +18,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.springsource.ide.eclipse.gradle.core.samples.SampleProjectRegistry;
 import org.springsource.ide.eclipse.gradle.core.test.util.TestUtils;
-import org.springsource.ide.eclipse.gradle.core.validators.ValidationResult;
-
+import org.springsource.ide.eclipse.commons.livexp.core.ValidationResult;
 
 /**
  * @author Kris De Volder
