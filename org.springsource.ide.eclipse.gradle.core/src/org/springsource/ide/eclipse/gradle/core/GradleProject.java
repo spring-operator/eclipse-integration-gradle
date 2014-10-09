@@ -83,6 +83,8 @@ import org.springsource.ide.eclipse.gradle.core.wtp.WTPUtil;
  */
 public class GradleProject {
 	
+	private static final IPath TEST_OUTPUT_PATH = new Path("bin-test");
+
 	public static boolean DEBUG = (""+Platform.getLocation()).contains("kdvolder");
 	private void debug(String msg) {
 		if (DEBUG) {
@@ -489,13 +491,23 @@ public class GradleProject {
 			}
 			IPath path = srcFolder.getFullPath();
 			IClasspathEntry oldEntry = oldEntries.get(path);
+			boolean isTest = isTest(path);
+			IPath testOutputPath = getProject().getFullPath().append(TEST_OUTPUT_PATH);
 			if (oldEntry==null) {
-				return JavaCore.newSourceEntry(path);
+				return JavaCore.newSourceEntry(path,
+						null,
+						null,
+						isTest ? testOutputPath : null,
+						null);
 			} else {
+				IPath out = oldEntry.getOutputLocation();
+				if (out==null && isTest) {
+					out = testOutputPath;
+				}
 				return JavaCore.newSourceEntry(path, 
 						oldEntry.getInclusionPatterns(), 
 						oldEntry.getExclusionPatterns(), 
-						oldEntry.getOutputLocation(), 
+						out, 
 						oldEntry.getExtraAttributes());
 			}
 		} catch (IllegalClassPathEntryException e) {
@@ -503,6 +515,15 @@ public class GradleProject {
 		} catch (Throwable e) {
 			throw new IllegalClassPathEntryException("illegal source folder", this, gradleSourceDir, e);
 		}
+	}
+
+	private static boolean isTest(IPath path) {
+		for (String s : path.segments()) {
+			if (s.equals("test")) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public GradleClassPathContainer getClassPathcontainer() {
